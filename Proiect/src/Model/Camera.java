@@ -1,6 +1,6 @@
-package Model;
+package model;
 
-public class Camera {
+public abstract class Camera {
     private int id;
     private int etaj;
     private boolean ocupata;
@@ -15,7 +15,7 @@ public class Camera {
         this.balcon = balcon;
     }
 
-    // Getters
+    // getters
     public int getId() {
         return id;
     }
@@ -36,7 +36,7 @@ public class Camera {
         return balcon;
     }
 
-    // Setters
+    // setters
     public void setId(int id) {
         this.id = id;
     }
@@ -57,14 +57,17 @@ public class Camera {
         this.balcon = balcon;
     }
 
+    // pentru fiecare tip de camera se va calcula pretul pe noapte in mod
+    // diferit(bazat si pe alte atribute ale camerei)
+    public abstract void calculeazaPretPeNoapte();
+
     @Override
     public String toString() {
-        return "Camera{" +
+        return "Camera{" + 
                 "id=" + id +
                 ", etaj=" + etaj +
                 ", ocupata=" + ocupata +
                 ", curata=" + curata +
-                ", balcon=" + balcon +
-                '}';
+                ", balcon="+ balcon + '}';
     }
 }
