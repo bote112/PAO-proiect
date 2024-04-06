@@ -63,11 +63,11 @@ public abstract class Camera {
 
     @Override
     public String toString() {
-        return "Camera{" + 
+        return "Camera{" +
                 "id=" + id +
                 ", etaj=" + etaj +
                 ", ocupata=" + ocupata +
                 ", curata=" + curata +
-                ", balcon="+ balcon + '}';
+                ", balcon=" + balcon + '}';
     }
 }
