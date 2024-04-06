@@ -2,6 +2,8 @@ package model;
 
 import java.time.LocalDate;
 
+import model.utils.CalculSejur;
+
 public class Rezervare {
     private int id;
     private Camera camera;
@@ -14,7 +16,7 @@ public class Rezervare {
     private boolean micDejun;
     private boolean parcare;
 
-    private int pretTotal;
+    private int pretSejur;
 
     public Rezervare(int id, int idClient, int idCamera, LocalDate dataInceput, LocalDate dataSfarsit, int nrPersoane,
             boolean micDejun, boolean parcare) {
@@ -61,8 +63,8 @@ public class Rezervare {
         return parcare;
     }
 
-    public int getPretTotal() {
-        return pretTotal;
+    public int getPretSejur() {
+        return pretSejur;
     }
 
     // setters
@@ -98,8 +100,8 @@ public class Rezervare {
         this.parcare = parcare;
     }
 
-    public void setPretTotal(int pretTotal) {
-        this.pretTotal = pretTotal;
+    public void setPretSejur(int pretSejur) {
+        this.pretSejur = pretSejur;
     }
 
     @Override

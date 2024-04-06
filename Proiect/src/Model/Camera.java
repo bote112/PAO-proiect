@@ -60,7 +60,7 @@ public abstract class Camera {
 
     // pentru fiecare tip de camera se va calcula pretul pe noapte in mod
     // diferit(bazat si pe alte atribute ale camerei)
-    public abstract void calculeazaPretPeNoapte();
+    public abstract int calculeazaPretPeNoapte();
 
     @Override
     public String toString() {
