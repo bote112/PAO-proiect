@@ -61,6 +61,10 @@ public class Rezervare {
         return parcare;
     }
 
+    public int getPretTotal() {
+        return pretTotal;
+    }
+
     // setters
     public void setId(int id) {
         this.id = id;
@@ -92,6 +96,10 @@ public class Rezervare {
 
     public void setParcare(boolean parcare) {
         this.parcare = parcare;
+    }
+
+    public void setPretTotal(int pretTotal) {
+        this.pretTotal = pretTotal;
     }
 
     @Override

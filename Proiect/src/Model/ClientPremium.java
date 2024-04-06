@@ -18,6 +18,12 @@ public class ClientPremium extends Client {
     }
 
     @Override
+    public int calculeazaDiscount(int pret) {
+        return pret - pctFidelitate * 100;
+
+    }
+
+    @Override
     public String toString() {
         return "ClientPremium{" +
                 "pctFidelitate=" + pctFidelitate +

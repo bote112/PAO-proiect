@@ -1,7 +1,8 @@
 package model;
 
 public abstract class Camera {
-    private int id;
+    private int id; // id-ul are urmatoarea semnificatie : x1xx - camera single, x2xx - camera
+                    // dubla, x3xx - camera deluxe
     private int etaj;
     private boolean ocupata;
     private boolean curata;

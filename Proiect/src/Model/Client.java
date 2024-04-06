@@ -67,6 +67,10 @@ public class Client {
         this.parola = parola;
     }
 
+    public int calculeazaDiscount(int pret) {
+        return pret;
+    }
+
     @Override
     public String toString() {
         return "Client{" +
