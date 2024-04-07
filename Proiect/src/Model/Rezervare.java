@@ -2,7 +2,7 @@ package model;
 
 import java.time.LocalDate;
 
-import model.utils.CalculSejur;
+import utils.CalculSejur;
 
 public class Rezervare {
     private int id;
@@ -21,13 +21,12 @@ public class Rezervare {
     public Rezervare(int id, int idClient, int idCamera, LocalDate dataInceput, LocalDate dataSfarsit, int nrPersoane,
             boolean micDejun, boolean parcare) {
         this.id = id;
-        this.camera = camera;
-        this.client = client;
         this.dataInceput = dataInceput;
         this.dataSfarsit = dataSfarsit;
         this.nrPersoane = nrPersoane;
         this.micDejun = micDejun;
         this.parcare = parcare;
+        this.pretSejur = CalculSejur.calculeazaPretSejur(this);
     }
 
     // getters
@@ -72,14 +71,6 @@ public class Rezervare {
         this.id = id;
     }
 
-    public void setClient(int idClient) {
-        this.client = client;
-    }
-
-    public void setCamera(int idCamera) {
-        this.camera = camera;
-    }
-
     public void setDataInceput(LocalDate dataInceput) {
         this.dataInceput = dataInceput;
     }
@@ -98,10 +89,6 @@ public class Rezervare {
 
     public void setParcare(boolean parcare) {
         this.parcare = parcare;
-    }
-
-    public void setPretSejur(int pretSejur) {
-        this.pretSejur = pretSejur;
     }
 
     @Override

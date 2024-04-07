@@ -1,4 +1,4 @@
-package model.utils;
+package utils;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -6,9 +6,12 @@ import java.time.temporal.ChronoUnit;
 import model.Camera;
 import model.CameraFactory;
 import model.Rezervare;
+import model.Client;
+import model.ClientPremium;
 
 public class CalculSejur {
     public static int calculeazaPretSejur(Rezervare rezervare) {
+
         Camera camera = CameraFactory.createCamera(rezervare.getCamera().getId(), rezervare.getCamera().getEtaj(),
                 rezervare.getCamera().isOcupata(), rezervare.getCamera().isCurata(), rezervare.getCamera().isBalcon());
 
@@ -24,6 +27,12 @@ public class CalculSejur {
 
         if (rezervare.isParcare()) {
             pretSejur += nrNopti * 30;
+        }
+
+        Client client = rezervare.getClient();
+        if (client instanceof ClientPremium) {
+            ClientPremium clientPremium = (ClientPremium) client;
+            clientPremium.calculeazaDiscount(pretSejur);
         }
 
         return pretSejur;

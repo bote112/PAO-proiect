@@ -1,7 +1,8 @@
 package model;
 
 public class ClientPremium extends Client {
-    private int pctFidelitate; // pentru fiecare punct de fideliare se va scadea 1% din pretul total al camerei
+    private int pctFidelitate; // pentru fiecare punct de fideliare se va scadea 100 din pretul total al
+                               // camerei
 
     public ClientPremium(int id, String nume, String prenume, String email, String telefon, String parola,
             int pctFidelitate) {
