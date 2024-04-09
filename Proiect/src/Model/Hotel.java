@@ -10,12 +10,12 @@ public class Hotel {
     private List<Camera> camere;
     private List<Rezervare> rezervari;
 
-    public Hotel(String nume, String adresa, int nrEtaje) {
+    public Hotel(String nume, String adresa, int nrEtaje, List<Camera> camere, List<Rezervare> rezervari) {
         this.nume = nume;
         this.adresa = adresa;
         this.nrEtaje = nrEtaje;
-        this.camere = new ArrayList<>();
-        this.rezervari = new ArrayList<>();
+        this.camere = camere;
+        this.rezervari = rezervari;
     }
 
     // getters
@@ -54,5 +54,16 @@ public class Hotel {
 
     public void setCamere(List<Camera> camere) {
         this.camere = camere;
+    }
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "nume='" + nume + '\'' +
+                ", adresa='" + adresa + '\'' +
+                ", nrEtaje=" + nrEtaje +
+                ", camere=" + camere +
+                ", rezervari=" + rezervari +
+                '}';
     }
 }

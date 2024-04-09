@@ -12,8 +12,7 @@ import model.ClientPremium;
 public class CalculSejur {
     public static int calculeazaPretSejur(Rezervare rezervare) {
 
-        Camera camera = CameraFactory.createCamera(rezervare.getCamera().getId(), rezervare.getCamera().getEtaj(),
-                rezervare.getCamera().isOcupata(), rezervare.getCamera().isCurata(), rezervare.getCamera().isBalcon());
+        Camera camera = rezervare.getCamera();
 
         LocalDate dataInceput = rezervare.getDataInceput();
         LocalDate dataSfarsit = rezervare.getDataSfarsit();

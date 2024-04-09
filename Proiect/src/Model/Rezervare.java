@@ -18,15 +18,16 @@ public class Rezervare {
 
     private int pretSejur;
 
-    public Rezervare(int id, int idClient, int idCamera, LocalDate dataInceput, LocalDate dataSfarsit, int nrPersoane,
-            boolean micDejun, boolean parcare) {
+    public Rezervare(int id, LocalDate dataInceput, LocalDate dataSfarsit, int nrPersoane,
+            boolean micDejun, boolean parcare, Client client, Camera camera) {
         this.id = id;
         this.dataInceput = dataInceput;
         this.dataSfarsit = dataSfarsit;
         this.nrPersoane = nrPersoane;
         this.micDejun = micDejun;
         this.parcare = parcare;
-        this.pretSejur = CalculSejur.calculeazaPretSejur(this);
+        this.client = client;
+        this.camera = camera;
     }
 
     // getters
@@ -89,6 +90,10 @@ public class Rezervare {
 
     public void setParcare(boolean parcare) {
         this.parcare = parcare;
+    }
+
+    public void setPretSejur(int pretSejur) {
+        this.pretSejur = CalculSejur.calculeazaPretSejur(this);
     }
 
     @Override
