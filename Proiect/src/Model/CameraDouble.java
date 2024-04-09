@@ -8,14 +8,14 @@ public class CameraDouble extends Camera {
         super(id, etaj, ocupata, curata, balcon);
     }
     /*
-    public boolean isPatSuplimentar() {
-        return patSuplimentar;
-    }
-
-    public void setPatSuplimentar(boolean patSuplimentar) {
-        this.patSuplimentar = patSuplimentar;
-    }
-    */
+     * public boolean isPatSuplimentar() {
+     * return patSuplimentar;
+     * }
+     * 
+     * public void setPatSuplimentar(boolean patSuplimentar) {
+     * this.patSuplimentar = patSuplimentar;
+     * }
+     */
 
     @Override
     public int calculeazaPretPeNoapte() {
@@ -23,10 +23,10 @@ public class CameraDouble extends Camera {
         int pretPeNoapte = pret + getEtaj() * 125 + (isBalcon() ? 350 : 0);
 
         // if (patSuplimentar) {
-        //     pretPeNoapte += 500;
+        // pretPeNoapte += 500;
         // }
         return pretPeNoapte;
-        
+
     }
 
     @Override

@@ -1,5 +1,10 @@
 
-package model;
+package factory;
+
+import model.Camera;
+import model.CameraDeluxe;
+import model.CameraDouble;
+import model.CameraSingle;
 
 public class CameraFactory {
     public static Camera createCamera(int id, int etaj, boolean ocupata, boolean curata, boolean balcon) {
